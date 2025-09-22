@@ -1,0 +1,28 @@
+//Abstracts 
+@import "abstract/variables";
+@import "abstract/mixins";
+
+//Base styles
+@import "base/reset";
+@import "base/base";
+@import "base/typography";
+
+//Layout
+@import "layout/container";
+
+//Components
+@import "components/buttons";
+@import "components/sidebar";
+@import "components/navigation";
+@import "components/menu";
+@import "components/logo";
+@import "components/search";
+@import "components/projects";
+@import "components/reminders";
+@import "components/user-section";
+@import "components/team";
+@import "components/overview";
+@import "components/tasks";
+
+//Pages
+@import "pages/dashboard";

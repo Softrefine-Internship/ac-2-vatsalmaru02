@@ -1,0 +1,101 @@
+.menu {
+  grid-row: 2 / -1;
+  grid-column: 2 / -1;
+  background-color: $color-background-primary;
+  padding: $spacing-lg;
+  max-height: 90vh;
+  overflow-y: auto;
+  width: 26rem;
+
+  @include respond(big-desktop) {
+    width: 23rem;
+  }
+
+  @include respond(tab-land) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: $z-index-dropdown;
+    width: 100vw;
+    opacity: 0;
+    transform: translateY(1rem) scaleY(0);
+    transform-origin: top;
+    transition: $transition-medium;
+    backface-visibility: hidden;
+
+    &:target {
+      opacity: 1;
+      transform: translateY(7rem) scaleY(1);
+
+      @include respond(phone-small) {
+        transform: translateY(5rem) scaleY(1);
+      }
+    }
+  }
+
+  &__title {
+    font-size: $font-size-regular;
+    font-weight: $font-weight-bold;
+    margin-bottom: 1rem;
+    @include flex-center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  &__expand-icon {
+    height: $spacing-md;
+    width: $spacing-md;
+    stroke: $color-text-primary;
+    transform: rotate(-90deg);
+    transition: $transition-medium;
+  }
+
+  &__list {
+    list-style: none;
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 2rem;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: $transition-medium;
+  }
+
+  &__item:last-child {
+    margin-bottom: 2rem;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      color: $color-text-secondary;
+      font-weight: $font-weight-medium;
+      font-size: 1.25rem;
+      line-height: 1.2;
+      text-decoration: none;
+      transition: $transition-fast;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-text-primary;
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  &__expand {
+    display: none;
+
+    &:checked + .menu__list {
+      opacity: 1;
+      transform: scaleY(1);
+      height: auto;
+    }
+  }
+
+  &__nav:has(.menu__expand:checked) .menu__expand-icon {
+    transform: rotate(0);
+  }
+}

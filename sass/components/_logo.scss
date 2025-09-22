@@ -1,0 +1,34 @@
+.logo-box {
+  border-bottom: 1px solid $color-border;
+  display: grid;
+  align-items: center;
+  justify-content: end;
+
+  .logo {
+    @include circle(6.5rem);
+    display: block;
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      display: block;
+      border: 2px solid;
+      border-radius: $border-radius-round;
+      height: 3rem;
+      width: 3rem;
+      @include absolute-center;
+    }
+
+    &::after {
+      content: "Z";
+      font-size: 3.2rem;
+      font-weight: $font-weight-medium;
+      line-height: 1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-95%, -40%) rotate(60deg);
+    }
+  }
+}

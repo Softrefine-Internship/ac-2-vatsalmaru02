@@ -1,0 +1,14 @@
+.heading-1 {
+  font-size: $font-size-large;
+  line-height: 1.2;
+
+  @include respond(phone) {
+    font-size: 2rem;
+  }
+}
+
+.heading-2 {
+  font-size: $font-size-medium;
+  font-weight: $font-weight-bold;
+  color: $color-text-primary;
+}

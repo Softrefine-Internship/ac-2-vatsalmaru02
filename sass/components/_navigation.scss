@@ -1,0 +1,62 @@
+.nav {
+  align-self: center;
+
+  @include respond(tab-land) {
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    @include respond(tab-land) {
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+    @include respond(tab-land) {
+      flex: 1;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      width: 7rem;
+      height: 7rem;
+      @include flex-center;
+      transition: $transition-fast;
+
+      @include respond(tab-land) {
+        width: 100%;
+      }
+
+      @include respond(phone-small) {
+        height: 5rem;
+      }
+    }
+
+    
+    &:hover,
+    &:active {
+      background-color: $color-background-primary;
+
+      .nav__icon {
+        // fill: $color-text-primary;
+        font-weight: $font-size-large;
+        stroke: $color-text-primary;
+      }
+    }
+  }
+
+  &__icon {
+    height: 2.4rem;
+    width: 2.4rem;
+    stroke: $color-text-muted;
+    // fill: $color-text-muted;
+    transition: $transition-fast;
+  }
+}
