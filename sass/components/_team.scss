@@ -1,0 +1,89 @@
+.team {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 2.4rem;
+
+  @include respond(tab-port) {
+    justify-content: start;
+    gap: 1rem;
+  }
+
+  @include respond(phone-small) {
+    flex-wrap: wrap;
+  }
+
+  &__member {
+    @include circle(5.5rem);
+
+    @include respond(tab-port) {
+      @include circle(6rem);
+    }
+
+    @include respond(phone-small) {
+      @include circle(4.8rem);
+    }
+  }
+
+  &__member--no-dp {
+    font-size: 1.6rem;
+    font-weight: $font-weight-medium;
+    color: $color-status-new;
+    background-color: rgba(252, 229, 187, 0.5);
+    @include circle(4.8rem);
+    display: grid;
+    place-items: center;
+
+    @include respond(tab-port) {
+      @include circle(6rem);
+    }
+
+    @include respond(phone-small) {
+      @include circle(4.8rem);
+    }
+  }
+
+  &__img {
+    display: block;
+    @include circle(4.8rem);
+
+    @include respond(tab-port) {
+      @include circle(6rem);
+    }
+
+    @include respond(phone-small) {
+      @include circle(4.8rem);
+    }
+  }
+
+  &__add-btn {
+    line-height: 1;
+    display: grid;
+    place-items: center;
+    color: $color-status-new;
+    font-size: 2rem;
+    border: 2px dashed currentColor;
+    border-radius: $border-radius-round;
+    background-color: $color-background-secondary;
+    height: 3rem;
+    width: 3rem;
+    cursor: pointer;
+    transition: $transition-fast;
+
+    &:hover {
+      background-color: rgba(239, 136, 77, 0.2);
+    }
+
+    @include respond(tab-port) {
+      height: 3.2rem;
+      width: 3.2rem;
+    }
+
+    @include respond(phone-small) {
+      height: 3rem;
+      width: 3rem;
+    }
+  }
+}

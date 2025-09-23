@@ -1,0 +1,145 @@
+.reminder {
+  border: 1px solid $color-border;
+  border-radius: $border-radius-large;
+  padding: 2rem;
+  box-shadow: $shadow-reminder;
+  margin-top: 1rem;
+
+  &__container {
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    transition: $transition-slow;
+    height: 100%;
+    width: 100%;
+
+    &--2,
+    &--3 {
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  &__text-box {
+    flex: 0 1 30rem;
+  }
+
+  &__date {
+    color: $color-text-secondary;
+    font-weight: $font-weight-medium;
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    font-weight: $font-weight-bold;
+    grid-column: 1 / 2;
+    text-wrap: pretty;
+
+    @include respond(desktop) {
+      font-size: 1.6rem;
+    }
+
+    @include respond(big-desktop) {
+      font-size: 1.3rem;
+    }
+
+    @include respond(tab-land) {
+      font-size: 1.6rem;
+    }
+
+    @include respond(phone-small) {
+      font-size: 1.3rem;
+    }
+  }
+
+  &__btn {
+    flex-shrink: 0;
+    font-size: $font-size-small;
+    color: $color-text-primary;
+    font-weight: $font-weight-medium;
+    padding: 0.8rem 1.6rem;
+    border: 2px dashed $color-accent-4;
+    border-radius: $border-radius-pill;
+    background: none;
+    cursor: pointer;
+    transition: $transition-fast;
+
+    &:hover {
+      background-color: rgba(239, 136, 77, 0.2);
+    }
+  }
+
+  &__indicator {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+
+  &__label {
+    display: inline-block;
+    height: 0.6rem;
+    width: 0.6rem;
+    border-radius: $border-radius-round;
+    background-color: $color-accent-3;
+    transition: $transition-fast;
+    cursor: pointer;
+  }
+
+  &__input {
+    display: none;
+
+    &:checked + .reminder__label {
+      background-color: $color-status-new;
+    }
+  }
+
+  // Slider states
+  &:has(.reminder__input--1:checked) {
+    .reminder__container {
+      .reminder__content--1 {
+        transform: translateX(0);
+      }
+      .reminder__content--2 {
+        left: 100%;
+      }
+      .reminder__content--3 {
+        left: 200%;
+      }
+    }
+  }
+
+  &:has(.reminder__input--2:checked) {
+    .reminder__container {
+      .reminder__content--1 {
+        transform: translateX(-100%);
+      }
+      .reminder__content--2 {
+        left: 0;
+      }
+      .reminder__content--3 {
+        left: 100%;
+      }
+    }
+  }
+
+  &:has(.reminder__input--3:checked) {
+    .reminder__container {
+      .reminder__content--1 {
+        transform: translateX(-200%);
+      }
+      .reminder__content--2 {
+        left: -100%;
+      }
+      .reminder__content--3 {
+        left: 0;
+      }
+    }
+  }
+}

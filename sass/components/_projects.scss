@@ -1,0 +1,174 @@
+.projects {
+  margin-bottom: 2.4rem;
+
+  &__header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 1.2rem;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    grid-gap: 2rem;
+
+    @include respond(desktop) {
+      grid-template-columns: 1fr;
+    }
+
+    @include respond(tab-land) {
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.project {
+  padding: 3rem 2.8rem;
+  border-radius: $border-radius-large;
+  height: 35rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: $shadow-card;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.02);
+    transition: $transition-fast;
+    box-shadow: $shadow-task;
+  }
+
+  @include respond(desktop) {
+    height: 28rem;
+  }
+
+  @include respond(tab-land) {
+    height: 35rem;
+  }
+
+  @include respond(phone) {
+    height: 30rem;
+  }
+
+  &--1 {
+    background-color: $color-accent-1;
+
+    .project__team-count,
+    .project__team-img {
+      border: 0.3rem solid $color-accent-1;
+    }
+
+    .project__team-count:hover {
+      background-color: $color-accent-1;
+    }
+  }
+
+  &--2 {
+    background-color: $color-accent-2;
+
+    .project__team-count,
+    .project__team-img {
+      border: 0.3rem solid $color-accent-2;
+    }
+
+    .project__team-count:hover {
+      background-color: $color-accent-2;
+    }
+  }
+
+  &__team {
+    display: flex;
+    margin-bottom: 3.2rem;
+
+    &-count,
+    &-img {
+      height: 4.2rem;
+      width: 4.2rem;
+      border-radius: $border-radius-round;
+    }
+
+    &-count {
+      font-size: 1.5rem;
+      color: $color-white;
+      display: grid;
+      place-items: center;
+      background-color: $color-text-primary;
+      z-index: 3;
+      transition: $transition-fast;
+      cursor: pointer;
+
+      &:hover {
+        font-weight: $font-weight-medium;
+        color: $color-text-primary;
+        border: 0.2rem solid $color-text-primary;
+      }
+    }
+
+    &-img {
+      object-fit: cover;
+      margin-left: -1.5rem;
+      z-index: 2;
+    }
+
+    .project__team-img:last-of-type {
+      z-index: 1;
+    }
+
+    .btn-opt {
+      border: none;
+      background: none;
+      margin-left: auto;
+      cursor: pointer;
+
+      &__icon {
+        height: 3rem;
+        width: 3rem;
+        margin-right: -1rem;
+      }
+    }
+  }
+
+  &__title {
+    font-size: $font-size-large;
+    line-height: 1.2;
+    color: $color-text-primary;
+    margin-bottom: 1.6rem;
+
+    @include respond(tab-land) {
+      font-size: 2rem;
+    }
+  }
+
+  &__deadline {
+    font-size: $font-size-small;
+    font-weight: $font-weight-medium;
+    color: $color-text-primary;
+    margin-bottom: auto;
+  }
+
+  &__progress-text {
+    font-size: $font-size-small;
+    font-weight: $font-weight-medium;
+    color: $color-text-primary;
+  }
+
+  &__progress-bar {
+    width: 100%;
+    height: 0.6rem;
+    border: none;
+
+    &::-webkit-progress-bar {
+      border-radius: $border-radius-pill;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    &::-webkit-progress-value {
+      border-radius: $border-radius-pill;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+}

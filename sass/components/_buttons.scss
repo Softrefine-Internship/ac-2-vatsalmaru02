@@ -1,0 +1,35 @@
+.btn {
+  &:link,
+  &:visited {
+    font-size: $font-size-regular;
+    color: $color-white;
+    background-color: $color-primary;
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: $border-radius-pill;
+    text-decoration: none;
+    transition: $transition-fast;
+  }
+
+  &:hover,
+  &:active {
+    background-color: $color-primary-dark;
+  }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    display: inline-block;
+    font-size: $font-size-regular;
+    font-weight: $font-weight-medium;
+    text-decoration: none;
+    color: $color-primary;
+    transition: $transition-fast;
+  }
+
+  &:hover,
+  &:active {
+    box-shadow: 0 1px currentColor;
+  }
+}

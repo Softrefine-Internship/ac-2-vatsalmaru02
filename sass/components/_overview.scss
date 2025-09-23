@@ -1,0 +1,34 @@
+.overview {
+  margin: 2rem auto;
+  padding: 2rem 1.6rem 2.2rem;
+  border-radius: $border-radius-large;
+  border: 1px solid $color-border-lighter;
+  box-shadow: $shadow-overview;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+
+  &__text {
+    color: $color-text-lighter;
+    font-size: $font-size-tiny;
+    font-weight: $font-weight-medium;
+
+    @include respond(desktop) {
+      font-size: $font-size-mini;
+    }
+
+    @include respond(tab-port) {
+      font-size: $font-size-tiny;
+    }
+
+    @include respond(phone-small) {
+      font-size: $font-size-mini;
+    }
+  }
+
+  &__value {
+    color: $color-text-primary;
+    font-size: 1.6rem;
+    font-weight: $font-weight-bold;
+  }
+}

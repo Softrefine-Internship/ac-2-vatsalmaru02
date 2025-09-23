@@ -1,0 +1,126 @@
+.user-section {
+  padding: 2.4rem 3.6rem 2rem 4rem;
+  box-shadow: $shadow-medium;
+
+  @include respond(desktop) {
+    padding: 2.4rem 3rem 2rem;
+  }
+}
+
+.user-header {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-template-rows: min-content max-content;
+  align-items: center;
+  justify-items: end;
+  grid-column-gap: 2rem;
+  margin-bottom: 4.8rem;
+
+  .btn-more {
+    grid-column: -2 / -1;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: -1rem;
+    margin-right: -1rem;
+
+    &__icon {
+      stroke: $color-accent-4;
+      height: 5rem;
+      width: 5rem;
+      transition: $transition-fast;
+
+      &:hover {
+        stroke: $color-status-new;
+      }
+    }
+  }
+
+  .btn--add-project {
+    grid-row: -2 / -1;
+  }
+
+  @include respond(tab-port) {
+    grid-template-rows: max-content;
+    margin-bottom: 3.2rem;
+
+    .btn--add-project {
+      grid-row: 1 / 2;
+    }
+  }
+}
+
+.user-profile {
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  grid-template-rows: repeat(2, max-content);
+  align-items: center;
+  grid-column-gap: 1rem;
+  font-size: $font-size-tiny;
+  font-weight: $font-weight-medium;
+  color: $color-text-light;
+  line-height: 0;
+
+  .notification {
+    margin-right: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    grid-row: 1 / -1;
+
+    &__icon {
+      height: 2.4rem;
+      width: 2.4rem;
+    }
+  }
+
+  &__img {
+    grid-row: 1 / -1;
+    height: 3.6rem;
+    width: 3.6rem;
+    border-radius: $border-radius-round;
+  }
+
+  &__name {
+    font-size: $font-size-regular;
+    font-weight: $font-weight-bold;
+    color: $color-text-primary;
+  }
+
+  &__btn {
+    grid-column: -2 / -1;
+    grid-row: 1 / -1;
+    border: 1px solid $color-accent-3;
+    background-color: $color-background-primary;
+    height: 1.8rem;
+    width: 1.8rem;
+    border-radius: $border-radius-round;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+
+    &__icon {
+      stroke: $color-status-new;
+      height: 1.3rem;
+      width: 1.3rem;
+    }
+  }
+
+  @include respond(tab-port) {
+    position: absolute;
+    top: 1.5rem;
+    right: 6.4rem;
+  }
+
+  @include respond(phone) {
+    top: 1.3rem;
+  }
+
+  @include respond(phone-small) {
+    right: 0.5rem;
+
+    .notification {
+      margin-right: 0;
+    }
+  }
+}

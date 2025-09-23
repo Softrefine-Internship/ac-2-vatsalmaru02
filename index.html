@@ -320,11 +320,312 @@
 
       <div class="help">
         <a href="#" class="help__link">
-          <svg class="help__icon">
-            <use xlink:href="img/sprite.svg#icon-help-circle"></use>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="help__icon"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm11.378-3.917c-.89-.777-2.366-.777-3.255 0a.75.75 0 0 1-.988-1.129c1.454-1.272 3.776-1.272 5.23 0 1.513 1.324 1.513 3.518 0 4.842a3.75 3.75 0 0 1-.837.552c-.676.328-1.028.774-1.028 1.152v.75a.75.75 0 0 1-1.5 0v-.75c0-1.279 1.06-2.107 1.875-2.502.182-.088.351-.199.503-.331.83-.727.83-1.857 0-2.584ZM12 18a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z"
+              clip-rule="evenodd"
+            />
           </svg>
         </a>
       </div>
     </div>
+
+    <main class="dashboard">
+      <p class="date">Today, 4 October</p>
+
+      <form class="search">
+        <label for="search" class="search__label">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="search__icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+            />
+          </svg>
+        </label>
+        <input
+          type="search"
+          id="search"
+          class="search__input"
+          placeholder="Searching for..."
+        />
+      </form>
+
+      <section class="projects">
+        <header class="projects__header">
+          <h2 class="heading-2">Recent projects</h2>
+          <a href="#" class="btn-text">View all</a>
+        </header>
+
+        <div class="projects__container">
+          <div class="project project--1">
+            <div class="project__team">
+              <span class="project__team-count">+3</span>
+              <img
+                src="./images/human-1.jpg"
+                alt="Project team photo"
+                class="project__team-img"
+              />
+              <img
+                src="./images/human-2.jpg"
+                alt="Project team photo"
+                class="project__team-img"
+              />
+              <button class="btn-opt">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="btn-opt__icon"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <h3 class="project__title">Design system</h3>
+            <p class="project__deadline">Deadline: 18 October</p>
+
+            <div class="project__progress">
+              <p class="project__progress-text">84 hours/ 40%</p>
+              <progress
+                value="40"
+                max="100"
+                class="project__progress-bar"
+              ></progress>
+            </div>
+          </div>
+
+          <div class="project project--2">
+            <div class="project__team">
+              <span class="project__team-count">+2</span>
+              <img
+                src="./images/human-3.jpg"
+                alt="Project team photo"
+                class="project__team-img"
+              />
+              <img
+                src="./images/human-6.jpg"
+                alt="Project team photo"
+                class="project__team-img"
+              />
+              <button class="btn-opt">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="btn-opt__icon"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <h3 class="project__title">Make unique page for customer</h3>
+            <p class="project__deadline">Deadline: 30 October</p>
+
+            <div class="project__progress">
+              <p class="project__progress-text">108 hours/ 75%</p>
+              <progress
+                value="75"
+                max="100"
+                class="project__progress-bar"
+              ></progress>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reminder-section">
+        <h2 class="heading-2">Reminders</h2>
+
+        <div class="reminder">
+          <div class="reminder__container">
+            <div class="reminder__content reminder__content--1">
+              <div class="reminder__text-box">
+                <p class="reminder__date">Tomorrow, 16:00-18:00</p>
+                <p class="reminder__text">
+                  Discussion of the interm results of the project
+                </p>
+              </div>
+              <button class="reminder__btn">Set reminder</button>
+            </div>
+
+            <div class="reminder__content reminder__content--2">
+              <div class="reminder__text-box">
+                <p class="reminder__date">Tomorrow, 19:00-20:00</p>
+                <p class="reminder__text">
+                  Discussion of the marketing results of the project
+                </p>
+              </div>
+              <button class="reminder__btn">Set reminder</button>
+            </div>
+
+            <div class="reminder__content reminder__content--3">
+              <div class="reminder__text-box">
+                <p class="reminder__date">Tomorrow, 20:00-21:00</p>
+                <p class="reminder__text">
+                  Discussion of the sales results of the project
+                </p>
+              </div>
+              <button class="reminder__btn">Set reminder</button>
+            </div>
+          </div>
+
+          <div class="reminder__indicator">
+            <input
+              type="radio"
+              name="reminder"
+              id="reminder1"
+              class="reminder__input reminder__input--1"
+              checked
+            />
+            <label for="reminder1" class="reminder__label"></label>
+
+            <input
+              type="radio"
+              name="reminder"
+              id="reminder2"
+              class="reminder__input reminder__input--2"
+            />
+            <label for="reminder2" class="reminder__label"></label>
+
+            <input
+              type="radio"
+              name="reminder"
+              id="reminder3"
+              class="reminder__input reminder__input--3"
+            />
+            <label for="reminder3" class="reminder__label"></label>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section class="user-section">
+      <header class="user-header">
+        <a href="#" class="btn btn--add-project">Add project</a>
+        <button class="btn-more">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="btn-more__icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+            />
+          </svg>
+        </button>
+
+        <div class="user-profile">
+          <button class="notification">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="notification__icon"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"
+              />
+            </svg>
+          </button>
+
+          <img
+            src="./images/human-10.jpg"
+            alt="Maria photo"
+            class="user-profile__img"
+          />
+          <p>User</p>
+          <p class="user-profile__name">Maria</p>
+          <button class="user-profile__btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="user-profile__btn__icon"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m19.5 8.25-7.5 7.5-7.5-7.5"
+              />
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <section class="team-section">
+        <h2 class="heading-2">Team members</h2>
+        <div class="team">
+          <figure class="team__member">
+            <img
+              src="./images/human-4.jpg"
+              alt="Photo of team member"
+              class="team__member"
+            />
+          </figure>
+          <figure class="team__member">
+            <img
+              src="./images/human-5.jpg"
+              alt="Photo of team member"
+              class="team__member"
+            />
+          </figure>
+          <figure class="team__member team__member--no-dp">JR</figure>
+          <figure class="team__member">
+            <img
+              src="./images/human-7.jpg"
+              alt="Photo of team member"
+              class="team__member"
+            />
+          </figure>
+          <figure class="team__member">
+            <img
+              src="./images/human-11.jpg"
+              alt="Photo of team member"
+              class="team__member"
+            />
+          </figure>
+          <button class="team__add-btn">+</button>
+        </div>
+      </section>
+    </section>
   </body>
 </html>
