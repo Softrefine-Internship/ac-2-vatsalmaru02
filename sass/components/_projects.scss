@@ -144,7 +144,7 @@
   }
 
   &__deadline {
-    font-size: $font-size-small;
+    font-size: 1.1rem; // slightly reduced
     font-weight: $font-weight-medium;
     color: $color-text-primary;
     margin-bottom: auto;

@@ -3,7 +3,7 @@
   padding: 2rem 1.6rem 2.2rem;
   border-radius: $border-radius-large;
   border: 1px solid $color-border-lighter;
-  box-shadow: $shadow-overview;
+  box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.06); // reduced shadow
   display: flex;
   justify-content: space-between;
   gap: 1rem;

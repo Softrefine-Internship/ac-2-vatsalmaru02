@@ -60,6 +60,7 @@
   font-weight: $font-weight-medium;
   color: $color-text-light;
   line-height: 0;
+  cursor: pointer;
 
   .notification {
     margin-right: 1rem;
@@ -92,6 +93,7 @@
     height: 3.6rem;
     width: 3.6rem;
     border-radius: $border-radius-round;
+    cursor: pointer; 
   }
 
   &__name {

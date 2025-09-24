@@ -23,6 +23,9 @@
     &--3 {
       position: absolute;
       top: 0;
+      // &:hover{
+        
+      // }
     }
   }
 
@@ -90,6 +93,12 @@
     background-color: $color-accent-3;
     transition: $transition-fast;
     cursor: pointer;
+
+    &:hover {
+      transform: scale(1.25);
+      background-color: $color-status-new;
+      box-shadow: 0 0 0 4px rgba(239, 136, 77, 0.15);
+    }
   }
 
   &__input {
@@ -100,7 +109,6 @@
     }
   }
 
-  // Slider states
   &:has(.reminder__input--1:checked) {
     .reminder__container {
       .reminder__content--1 {

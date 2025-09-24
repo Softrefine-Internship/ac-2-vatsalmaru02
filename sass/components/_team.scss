@@ -46,6 +46,7 @@
   }
 
   &__img {
+    cursor: pointer;
     display: block;
     @include circle(4.8rem);
 
