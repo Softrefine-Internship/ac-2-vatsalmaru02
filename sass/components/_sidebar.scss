@@ -5,6 +5,10 @@
   grid-template-columns: max-content 1fr;
   grid-template-rows: max-content 1fr max-content;
 
+  @include respond(desktop) {
+    height: 118vh;
+  }
+
   @include respond(tab-land) {
     grid-column: 1 / -1;
     grid-template-columns: 7rem 1fr max-content;

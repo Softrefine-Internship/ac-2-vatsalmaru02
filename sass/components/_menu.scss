@@ -7,6 +7,10 @@
   overflow-y: auto;
   width: 26rem;
 
+  @include respond(desktop) {
+    max-height: 120vh;
+  }
+
   @include respond(big-desktop) {
     width: 23rem;
   }
