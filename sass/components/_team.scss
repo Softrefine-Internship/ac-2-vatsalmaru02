@@ -16,6 +16,7 @@
   }
 
   &__member {
+    cursor: pointer;
     @include circle(5.5rem);
 
     @include respond(tab-port) {

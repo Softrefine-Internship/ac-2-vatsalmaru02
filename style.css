@@ -927,6 +927,7 @@ body {
   }
 }
 .team__member {
+  cursor: pointer;
   height: 5.5rem;
   width: 5.5rem;
   border-radius: 50%;
