@@ -22,24 +22,40 @@
   }
 
   &__link {
+    width: 7rem;
+    height: 7rem;
+    @include flex-center;
+    transition: $transition-fast;
+
+    @include respond(tab-land) {
+      width: 100%;
+    }
+
+    @include respond(phone-small) {
+      height: 5rem;
+    }
+
     &:link,
     &:visited {
       text-decoration: none;
-      width: 7rem;
-      height: 7rem;
-      @include flex-center;
-      transition: $transition-fast;
+    }
 
-      @include respond(tab-land) {
-        width: 100%;
+    &--active {
+      background-color: $color-background-primary;
+
+      .nav__icon {
+        stroke: $color-text-primary;
       }
 
-      @include respond(phone-small) {
-        height: 5rem;
+      @include respond(tab-land) {
+        background-color: transparent;
+
+        .nav__icon {
+          stroke: $color-text-muted;
+        }
       }
     }
 
-    
     &:hover,
     &:active {
       background-color: $color-background-primary;
@@ -58,5 +74,15 @@
     stroke: $color-text-muted;
     // fill: $color-text-muted;
     transition: $transition-fast;
+  }
+}
+
+@include respond(tab-land) {
+  .sidebar__input:checked ~ .nav #homeLink {
+    background-color: $color-background-primary;
+
+    .nav__icon {
+      stroke: $color-text-primary;
+    }
   }
 }

@@ -26,10 +26,16 @@
         <div class="title__text">Teamwork & time mangement</div>
       </div>
 
+      <input type="checkbox" id="sidebarToggle" class="sidebar__input" />
+
       <nav class="nav">
         <ul class="nav__list">
           <li class="nav__item">
-            <a href="#menu" class="nav__link nav__link--active">
+            <label
+              for="sidebarToggle"
+              id="homeLink"
+              class="nav__link nav__link--active"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -44,11 +50,11 @@
                   d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
                 />
               </svg>
-            </a>
+            </label>
           </li>
 
           <li class="nav__item">
-            <a href="#menu" class="nav__link nav__link--active">
+            <a href="#" class="nav__link">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -67,7 +73,7 @@
           </li>
 
           <li class="nav__item">
-            <a href="#menu" class="nav__link nav__link--active">
+            <a href="#" class="nav__link">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -86,7 +92,7 @@
           </li>
 
           <li class="nav__item">
-            <a href="#menu" class="nav__link nav__link--active">
+            <a href="#" class="nav__link">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -105,7 +111,7 @@
           </li>
 
           <li class="nav__item">
-            <a href="#menu" class="nav__link nav__link--active">
+            <a href="#" class="nav__link">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -124,7 +130,7 @@
           </li>
 
           <li class="nav__item">
-            <a href="#menu" class="nav__link nav__link--active">
+            <a href="#" class="nav__link">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -624,6 +630,70 @@
             />
           </figure>
           <button class="team__add-btn">+</button>
+        </div>
+
+        <div class="overview">
+          <div class="overview__detail">
+            <p class="overview__text">Project time</p>
+            <p class="overview__value">18 hours</p>
+          </div>
+          <div class="overview__detail">
+            <p class="overview__text">Tasks in progress</p>
+            <p class="overview__value">2</p>
+          </div>
+          <div class="overview__detail">
+            <p class="overview__text">Finished tasks</p>
+            <p class="overview__value">16</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="tasks">
+        <header class="tasks__header">
+          <h2 class="heading-2">Daily tasks (3)</h2>
+          <a href="#" class="btn-text">Edit</a>
+        </header>
+
+        <div class="task task--add-new">
+          <p class="task__text">Add new</p>
+          <button class="task__add-btn">+</button>
+        </div>
+
+        <div class="task task--new">
+          <div class="task__status task__status--new">
+            <span>New</span>
+            <input
+              type="checkbox"
+              class="task__status__check"
+              aria-label="Mark new"
+            />
+          </div>
+          <p class="task__text">Change color palette to more brite</p>
+        </div>
+
+        <div class="task task--in-progress">
+          <div class="task__status task__status--in-progress">
+            <span>In progress</span
+            ><input
+              type="checkbox"
+              class="task__status__check"
+              aria-label="Mark in progress"
+            />
+          </div>
+          <p class="task__text">Make prototype for mobile version</p>
+        </div>
+
+        <div class="task task--done">
+          <div class="task__status task__status--done">
+            <span>Done</span>
+            <input
+              type="checkbox"
+              class="task__status__check"
+              aria-label="Mark in progress"
+              checked
+            />
+          </div>
+          <p class="task__text">Make fixis in homepage</p>
         </div>
       </section>
     </section>

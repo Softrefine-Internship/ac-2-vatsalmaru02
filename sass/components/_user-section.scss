@@ -67,10 +67,23 @@
     border: none;
     cursor: pointer;
     grid-row: 1 / -1;
+    position: relative;
 
     &__icon {
       height: 2.4rem;
       width: 2.4rem;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 2px;
+      right: 4px;
+      width: 7px;
+      height: 7px;
+      background: #ff3b30;
+      border: 1px solid $color-white;
+      border-radius: 50%;
     }
   }
 

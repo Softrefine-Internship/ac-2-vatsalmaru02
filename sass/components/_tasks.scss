@@ -1,0 +1,199 @@
+.tasks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.6rem;
+
+  &__header {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+
+.task {
+  height: 15rem;
+  padding: 1rem 1.5rem;
+  padding-left: 2.4rem;
+  box-shadow: $shadow-task;
+  border-radius: $border-radius-medium;
+  color: $color-text-primary;
+  overflow: hidden;
+  position: relative;
+  display: grid;
+  grid-template-rows: 3rem 1fr min-content;
+
+  &--new {
+    position: relative;
+    background-color: $color-white;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      border: 2px solid $color-accent-4; 
+      border-color: $color-status-new; 
+      border-radius: 50%;
+      width: 20rem;
+      height: 20rem;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    &::before {
+      top: 5rem;
+      right: -12rem;
+      transform: rotate(80deg);
+    }
+
+    &::after {
+      top: 8rem;
+      right: -10rem;
+      transform: rotate(-10deg);
+    }
+  }
+
+  &__text {
+    color: inherit;
+    font-size: 1.5rem;
+    font-weight: $font-weight-medium;
+    text-wrap: balance;
+    line-height: 1.3;
+    grid-row: 2 / 3;
+    z-index: 10;
+  }
+
+  &__add-btn {
+    grid-row: -2 / -1;
+    justify-self: end;
+    align-self: end;
+    background: none;
+    border: none;
+    font-size: 2.4rem;
+    font-weight: 100;
+    color: $color-text-secondary;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+  }
+
+  &__status {
+    justify-self: end;
+    font-size: $font-size-tiny;
+    font-weight: $font-weight-medium;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    & > * {
+      display: inline-block;
+    }
+
+    &__check {
+      height: 1.1rem;
+      width: 1.1rem;
+      border: 1px solid $color-accent-4;
+      border-radius: $border-radius-small;
+      cursor: pointer;
+    }
+
+    &__icon {
+      height: 1.1rem;
+      width: 1.1rem;
+      background-color: #000;
+      cursor: pointer;
+    }
+
+    &::before {
+      content: "";
+      height: 0.8rem;
+      width: 0.8rem;
+      border-radius: $border-radius-round;
+      margin-right: -0.5rem;
+    }
+
+    &--new::before {
+      background-color: $color-status-new;
+    }
+    &--in-progress::before {
+      background-color: $color-status-progress;
+    }
+    &--done::before {
+      background-color: $color-status-done;
+    }
+  }
+
+  &--add-new {
+    background-color: $color-background-tertiary;
+    cursor: pointer;
+  }
+
+  &--in-progress {
+    &::before,
+    &::after,
+    .task__status::after {
+      content: "";
+      display: block;
+      height: 2rem;
+      width: 8rem;
+      border: 1px solid $color-accent-4;
+      border-radius: 2px;
+      position: absolute;
+      left: -1.2rem;
+    }
+
+    &::before {
+      bottom: 2rem;
+      transform: translate(-50%, -10%) rotate(-25deg);
+    }
+
+    &::after {
+      width: 7.4rem;
+      bottom: 1rem;
+      transform: rotate(-25deg);
+    }
+
+    .task__status::after {
+      bottom: -2rem;
+      transform: rotate(-25deg);
+    }
+  }
+
+  &--done {
+    background-color: $color-status-new;
+    color: $color-white;
+
+    &::before,
+    &::after,
+    .task__status::after {
+      content: "";
+      display: block;
+      height: 2.4rem;
+      width: 2rem;
+      border: 1px solid currentColor;
+      border-radius: 60% 40% 60% 40% / 60% 40% 60% 40%;
+      position: absolute;
+    }
+
+    &::before {
+      right: 6rem;
+      bottom: -0.6rem;
+    }
+
+    &::after {
+      right: -1rem;
+      bottom: 0;
+    }
+
+    .task__status::after {
+      height: 4.2rem;
+      width: 3.5rem;
+      right: 1.2rem;
+      bottom: 2rem;
+    }
+  }
+}
+
+input[type="checkbox"] {
+  accent-color: #000;
+}
