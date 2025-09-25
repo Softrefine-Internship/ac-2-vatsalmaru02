@@ -71,13 +71,14 @@
   margin-top: 6rem;
 
   &__icon {
-    height: 4.8rem;
-    width: 4.8rem;
+    height: 3.8rem !important;
+    width: 3.8rem !important;
     color: #000000;
     @include circle(4.8rem);
 
     &:hover {
-      fill: $color-text-secondary;
+      transform: scale(1.02);
+      transition: $transition-fast;
     }
   }
 
