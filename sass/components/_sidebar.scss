@@ -6,7 +6,7 @@
   grid-template-rows: max-content 1fr max-content;
 
   @include respond(desktop) {
-    height: 118vh;
+    height: 127vh;
   }
 
   @include respond(tab-land) {
