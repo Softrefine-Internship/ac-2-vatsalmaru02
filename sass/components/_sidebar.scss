@@ -8,7 +8,7 @@
   
 
   @include respond(desktop) {
-    height: 127vh;
+    height: 100vh;
   }
 
   @include respond(tab-land) {

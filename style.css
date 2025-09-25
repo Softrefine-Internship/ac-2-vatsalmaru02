@@ -131,7 +131,7 @@ body {
 }
 @media only screen and (max-width: 68.75em) {
   .sidebar {
-    height: 127vh;
+    height: 100vh;
   }
 }
 @media only screen and (max-width: 56.25em) {
