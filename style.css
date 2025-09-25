@@ -18,12 +18,12 @@ html {
 }
 @media only screen and (max-width: 81.25em) {
   html {
-    font-size: 59.375%;
+    font-size: 57.375%;
   }
 }
 @media only screen and (max-width: 75em) {
   html {
-    font-size: 56.25%;
+    font-size: 54.25%;
   }
 }
 @media only screen and (max-width: 68.75em) {

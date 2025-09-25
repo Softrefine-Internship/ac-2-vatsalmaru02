@@ -15,11 +15,11 @@ html {
   }
 
   @include respond(largest) {
-    font-size: 59.375%; // 1rem = 9.5px
+    font-size: 57.375%; // 1rem = 9.5px
   }
 
   @include respond(big-desktop) {
-    font-size: 56.25%; // 1rem = 9px
+    font-size: 54.25%; // 1rem = 9px
   }
 
   @include respond(desktop) {
