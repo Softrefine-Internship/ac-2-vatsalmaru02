@@ -35,6 +35,11 @@
       @content;
     }
   }
+  @if $breakpoint == large-medium {
+    @media only screen and (max-width: $bp-large-medium) {
+      @content;
+    }
+  }
 }
 
 // Flexbox center mixin

@@ -10,6 +10,10 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px
 
+  @include respond(large-medium) {
+    font-size: 52.5%;
+  }
+
   @include respond(largest) {
     font-size: 59.375%; // 1rem = 9.5px
   }
